@@ -16,5 +16,12 @@ Tillsvidare hemsida
 - Kontaktuppgifter
 - Preliminärdatum
 
+Databaser
+- Wordpress databas
+- Elevkårsmedlem databas
+
 Hemsida
--
+- Skaffa fram information som behövs till hemsidan
+- Struktur information som kategorier och underkategorier
+- Bygga eget wordpresstema med bootstrap
+- Inkludera twitter och facebook feeds
