@@ -26,6 +26,11 @@ body{
 #kontaktbtn{
 	color: #ccc;
 }
+#kontaktbtn h3:hover{
+	color:#555;
+	cursor: pointer;
+}
+
 #logga{
 	color: #ccc;
 }

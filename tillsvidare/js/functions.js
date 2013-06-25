@@ -1,5 +1,14 @@
 $(document).ready(function() {
+
+	var toggle = false;
 	$('#kontaktbtn').click(function() {
-		$('#kontaktinfo').slideDown(1500);
+		if(toggle == false){
+			$('#kontaktinfo').slideDown(1500);
+			toggle = true;
+		}else{
+			$('#kontaktinfo').slideUp(500);
+			toggle = false;
+		}
+		
 	});
 });
