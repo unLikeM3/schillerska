@@ -1,0 +1,30 @@
+body{
+	background-color:#333;
+}
+.center {
+	text-align: center;
+}
+
+#hmenu{
+
+}
+.hmenuitem{
+	color:#fff;
+	background-image: url('../img/nbbg.png');
+	font-size: 18px;
+	font-style: bold;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-left:10px;
+}
+#leftnb {
+	background-image: url('../img/leftnb.png');
+}
+#rightnb {
+	background-image: url('../img/rightnb.png');
+}
+
+.hmenuitem:hover{
+	background-color:#fff;
+}
