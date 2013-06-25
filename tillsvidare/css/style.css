@@ -1,8 +1,6 @@
 body{
 	background-color:#333;
 	background: url('../img/bg.jpg')no-repeat center center fixed; 
- 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg.jpg',sizingMethod='scale')";
  	-webkit-background-size: cover;
  	-moz-background-size: cover;
 	-o-background-size: cover;
