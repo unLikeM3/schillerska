@@ -19,3 +19,16 @@ body{
 	max-height: 300px;
 	margin-bottom: 5px;
 }
+
+#kontaktinfo{
+	display: none;
+}
+#kontaktbtn{
+	color: #ccc;
+}
+#logga{
+	color: #ccc;
+}
+#logga h3{
+	margin-bottom: 0px;
+}
