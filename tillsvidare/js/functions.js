@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-	document.body.style.backgroundImage ="url('img/bg.jpg')";
-
 	var toggle = false;
 	$('#kontaktbtn').click(function() {
 		if(toggle == false){
