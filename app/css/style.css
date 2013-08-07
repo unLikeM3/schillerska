@@ -1,0 +1,41 @@
+.inlagg {
+	text-shadow: none;
+	box-shadow: none;
+	margin-bottom:20px;
+	background-color:#FFF;
+	border-radius: 10px 10px 10px 10px;
+	opacity: 0.9;
+	-moz-opacity: 0.9;
+	-webkit-opacity: 0.9;
+	-khtml-opacity: 0.9;
+}
+.inlagg .wrapper {
+	padding:10px 10px 10px 10px;
+}
+.inlagg .wrapper .title {
+	/* border-bottom: 1px solid #000; */
+	color: #08c;
+	opacity: 1.0;
+	-moz-opacity: 1.0;
+	-webkit-opacity: 1.0;
+	-khtml-opacity: 1.0;
+}
+
+.inlagg .wrapper .title h2 {
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.inlagg .wrapper .content {
+	margin-top:10px;
+	color:#000;
+	font-size: 14px;
+	opacity: 1.0;
+	-moz-opacity: 1.0;
+	-webkit-opacity: 1.0;
+	-khtml-opacity: 1.0;
+}
+
+.inlagg .wrapper .meta {
+
+}
