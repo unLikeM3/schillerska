@@ -13,12 +13,19 @@
 <body>
     <div data-role="page">
  
-        <div class="header">
-            
+        <div data-role="header" data-theme="b" style="overflow:hidden;">
+            <h1>Schillerskas Elevkår</h1>
         </div>
 
+        <div data-role="navbar">
+            <ul>
+                <li><a data-icon="home" data-iconpos="bottom" href="#" class="ui-btn-active">Hem</a></li>
+                <li><a data-icon="info" data-iconpos="bottom" href="#">Schema</a></li>
+                <li><a data-icon="grid" data-iconpos="bottom" href="#">Galleri</a></li>
+            </ul>
+        </div>
+        
         <div data-role="content" data-theme="b">
-
             <div class="galleryinlagg">
                 <div class="wrapper">
 
@@ -77,8 +84,7 @@
                     </div>
 
                 </div>
-            </div>
-
+            </div>           
         </div><!-- /content -->
  
         <div data-role="footer" data-theme="b">
@@ -89,3 +95,4 @@
     <script type="text/javascript" src="cordova.js"></script>
 </body>
 </html>
+
