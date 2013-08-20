@@ -19,9 +19,9 @@
 
         <div data-role="navbar">
             <ul>
-                <li><a id="home" data-icon="home" data-iconpos="bottom" href="index.html">Hem</a></li>
-                <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="#">Schema</a></li>
-                <li><a id="gallery" data-icon="grid" data-iconpos="bottom" href="gallery.html" class="ui-btn-active">Galleri</a></li>
+                <li><a id="home" data-icon="home" data-iconpos="bottom">Hem</a></li>
+                <li><a id="schedule" data-icon="info" data-iconpos="bottom">Schema</a></li>
+                <li><a id="gallery" data-icon="grid" data-iconpos="bottom" class="ui-btn-active">Galleri</a></li>
             </ul>
         </div>
         
@@ -94,7 +94,7 @@
     </div><!-- /page -->
     <script>
             $('#home').click(function() {
-                $.mobile.changePage( "index.html", null, true, true, { transition: "slide", dataUrl: "index.html"} );
+                $.mobile.changePage( "index.html", { transition: "slide", dataUrl: "index.html"} );
             });
     </script>
     <script type="text/javascript" src="cordova.js"></script>
