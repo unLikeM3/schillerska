@@ -19,9 +19,9 @@
 
         <div data-role="navbar">
             <ul>
-                <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active" href="index.html">Hem</a></li>
-                <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="#">Schema</a></li>
-                <li><a id="gallery" data-icon="grid" data-iconpos="bottom" href="gallery.html">Galleri</a></li>
+                <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active">Hem</a></li>
+                <li><a id="schedule" data-icon="info" data-iconpos="bottom">Schema</a></li>
+                <li><a id="gallery" data-icon="grid" data-iconpos="bottom">Galleri</a></li>
             </ul>
         </div>
         
@@ -48,6 +48,15 @@
         </div><!-- /footer -->
  
     </div><!-- /page -->
+    <script>
+    $('#home').click(function(){
+        window.location('index.html');
+    });
+    $('#gallery').click(function(){
+        window.location('gallery.html');
+    });
+
+    </script>
     <script type="text/javascript" src="cordova.js"></script>
 </body>
 </html>
