@@ -13,16 +13,8 @@
 <body>
     <div id="one" data-role="page">
  
-        <div data-role="header" data-position="fixed" data-theme="b" style="overflow:hidden;">
+        <div data-role="header" data-position="fixed" data-theme="b">
             <h1>Schillerskas Elevkår</h1>
-
-            <div data-role="navbar" data-theme="c">
-                <ul>
-                    <li><a id="home" data-icon="home" data-iconpos="bottom" href="#one">Hem</a></li>
-                    <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="#two">Schema</a></li>
-                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" data-transition="slidefade" href="#three">Galleri</a></li>
-                </ul>
-            </div>        
         </div>
         
         <div data-role="content" data-theme="b">
@@ -43,8 +35,14 @@
             
         </div><!-- /content -->
  
-        <div data-role="footer" data-theme="b">
-            <h4>© Zebrafeed Studio 2013</h4>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a id="home" data-icon="home" data-iconpos="bottom" href="#one">Hem</a></li>
+                    <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="#two">Schema</a></li>
+                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" data-transition="slidefade" href="#three">Galleri</a></li>
+                </ul>
+            </div>
         </div><!-- /footer -->
  
     </div><!-- /page -->
