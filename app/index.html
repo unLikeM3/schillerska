@@ -15,6 +15,7 @@
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
             <h1 id="title">Nyheter</h1>
+            <a class="ui-btn-right" href="#">Bli Medlem</a>
         </div>
         
         <div id="content" data-role="content" data-theme="b">
@@ -43,6 +44,15 @@
  
     </div><!-- /page --> 
 
+    <!-- Schema sidan -->
+    <div id="three" data-role="page">
+
+        <div id="schedulecontent" data-role="content" data-theme="b">
+
+            
+        </div><!-- /content -->
+ 
+    </div><!-- /page -->
     <!-- Galleri sidan -->
     <div id="four" data-role="page">
         
@@ -87,6 +97,7 @@
         $("#gallery").click(function(){
             galleryContent();
         });
+
         $(document).bind('pageinit', function(){
             firstLoad();
         });
