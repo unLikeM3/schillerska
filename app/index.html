@@ -48,13 +48,14 @@
     <div id="three" data-role="page">
 
         <div id="schedulecontent" data-role="content" data-theme="b">
-            Personnummer: <input type="text" id="pnr" placeholder="YYMMDDXXXX"> <br>
+            Personnummer: <input type="text" id="pnr" placeholder="YYMMDDXXXX"> 
             Period: 
             <select id="period">
                 <option value="HT">HT</option>
                 <option value="VT">VT</option>
             </select> <br>
-            <button onclick="fetchSchedule(); return false;">Hämta schema</button>
+            <a href="#" data-role="button" onclick="fetchSchedule(); return false;">Hämta schema</a>
+            <div id="schedulecontainer" class="schemabild"></div>
         </div><!-- /content -->
  
     </div><!-- /page -->
@@ -107,8 +108,7 @@
             console.log(pnr, period);
 
             $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period}, function(data){
-                $('#schedulecontent').html("");
-                $('#schedulecontent').html(data);
+                $('#schedulecontainer').html(data);
             });
         }
 

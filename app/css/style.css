@@ -100,3 +100,10 @@ CSS för Galleri
 	width:100%;
 	height:auto;
 }
+
+/*
+CSS för Schema
+*/
+.schemabild img{
+	width: 100%
+}
