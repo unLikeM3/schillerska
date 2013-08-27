@@ -25,7 +25,7 @@
         <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
             <div data-role="navbar">
                 <ul>
-                    <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active">Hem</a></li>
+                    <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active">Nyheter</a></li>
                     <li><a id="schedule" data-icon="info" data-iconpos="bottom">Schema</a></li>
                     <li><a id="gallery" data-icon="grid" data-iconpos="bottom">Galleri</a></li>
                 </ul>
@@ -48,8 +48,13 @@
     <div id="three" data-role="page">
 
         <div id="schedulecontent" data-role="content" data-theme="b">
-
-            
+            Personnummer: <input type="text" id="pnr" placeholder="YYMMDDXXXX"> <br>
+            Period: 
+            <select id="period">
+                <option value="HT">HT</option>
+                <option value="VT">VT</option>
+            </select> <br>
+            <button class="btn" onclick="fetchSchedule(); return false;">Hämta schema</button>
         </div><!-- /content -->
  
     </div><!-- /page -->
@@ -90,12 +95,30 @@
             $("#title").html("Galleri");            
         }
 
+        var scheduleContent = function(){
+            $("#content").html($('#schedulecontent').html());
+            $("#title").html("Schema");            
+        }
+
+        var fetchSchedule = function() {
+            var pnr = $('#pnr').val();
+            var period = $('#period').val();
+
+            $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period}, function(data){
+                $('#schedulecontent').html(data);
+            });
+        }
+
         $("#home").click(function(){
             homeContent();
         });
 
         $("#gallery").click(function(){
             galleryContent();
+        });
+
+        $("#schedule").click(function(){
+            scheduleContent();
         });
 
         $(document).bind('pageinit', function(){
