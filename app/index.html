@@ -17,7 +17,7 @@
             <h1>Nyheter</h1>
         </div>
         
-        <div id="news" data-role="content" data-theme="b">
+        <div id="content" data-role="content" data-theme="b">
 
             
         </div><!-- /content -->
@@ -27,27 +27,16 @@
                 <ul>
                     <li><a id="home" data-icon="home" data-iconpos="bottom" href="#one">Hem</a></li>
                     <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="#two">Schema</a></li>
-                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" data-transition="slidefade" href="#three">Galleri</a></li>
+                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom">Galleri</a></li>
                 </ul>
             </div>
         </div><!-- /footer -->
  
     </div><!-- /page -->
-    <div id="three" data-role="page">
- 
-        <div data-role="header" data-theme="b" style="overflow:hidden;">
-            <h1>Schillerskas Elevkår</h1>
-        </div>
 
-        <div data-role="navbar">
-            <ul>
-                <li><a id="home" data-icon="home" data-iconpos="bottom" data-transition="slidefade" href="#one">Hem</a></li>
-                <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="#two">Schema</a></li>
-                <li><a id="gallery" data-icon="grid" data-iconpos="bottom" href="#three">Galleri</a></li>
-            </ul>
-        </div>
+    <div id="three" data-role="page">
         
-        <div data-role="content" data-theme="b">
+        <div id="gallerycontent" data-role="content" data-theme="b">
             <div class="galleryinlagg">
                 <div class="wrapper">
 
@@ -74,10 +63,16 @@
             <h4>© Zebrafeed Studio 2013</h4>
         </div><!-- /footer -->     
     </div><!-- /page -->
+
+
     <script>
         var loadPosts = function() {
-            $('#news').load('http://www.schillerskaselevkar.se/loadposts.php');
+            $('#content').load('http://www.schillerskaselevkar.se/loadposts.php');
         }
+        
+        $("#gallery").click(function(){
+            $("#content").html($('#gallerycontent').html());
+        });
 
         $(document).ready(function(){
             loadPosts();
