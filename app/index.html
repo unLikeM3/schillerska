@@ -13,7 +13,7 @@
 <body>
     <div id="one" data-role="page">
  
-        <div data-role="header" data-position="fixed" data-theme="b">
+        <div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">
             <h1 id="title"></h1>
         </div>
         
@@ -22,7 +22,7 @@
             
         </div><!-- /content -->
  
-        <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="footer" data-position="fixed" data-fullscreen="true" data-theme="b">
             <div data-role="navbar">
                 <ul>
                     <li><a id="home" data-icon="home" data-iconpos="bottom">Hem</a></li>
@@ -65,20 +65,29 @@
             $('#gallerycontent').load('http://www.schillerskaselevkar.se/loadgallery.php')
         }
 
-        $("#home").click(function(){
+        var homeContent = function() {
             $("#content").html($('#newscontent').html());
-            $("#title").html("Nyheter");
+            $("#title").html("Nyheter");            
+        }
+
+        var galleryContent = function(){
+            $("#content").html($('#gallerycontent').html());
+            $("#title").html("Galleri");            
+        }
+
+        $("#home").click(function(){
+            homeContent();
         });
 
         $("#gallery").click(function(){
-            $("#content").html($('#gallerycontent').html());
-            $("#title").html("Galleri");
+            galleryContent();
         });
 
         $(document).ready(function(){
             loadPosts();
             loadGallery();
         });
+
     </script>
     <script type="text/javascript" src="cordova.js"></script>
 </body>
