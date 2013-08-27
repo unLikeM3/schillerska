@@ -54,7 +54,7 @@
                 <option value="HT">HT</option>
                 <option value="VT">VT</option>
             </select> <br>
-            <button class="btn" onclick="fetchSchedule(); return false;">Hämta schema</button>
+            <button onclick="fetchSchedule(); return false;">Hämta schema</button>
         </div><!-- /content -->
  
     </div><!-- /page -->
@@ -104,7 +104,10 @@
             var pnr = $('#pnr').val();
             var period = $('#period').val();
 
+            console.log(pnr, period);
+
             $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period}, function(data){
+                $('#schedulecontent').html("");
                 $('#schedulecontent').html(data);
             });
         }
