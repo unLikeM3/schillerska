@@ -14,18 +14,17 @@
     <div id="one" data-role="page">
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
-            <h1 id="title"></h1>
+            <h1 id="title">Nyheter</h1>
         </div>
         
         <div id="content" data-role="content" data-theme="b">
 
-            
         </div><!-- /content -->
  
         <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
             <div data-role="navbar">
                 <ul>
-                    <li><a id="home" data-icon="home" data-iconpos="bottom">Hem</a></li>
+                    <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active">Hem</a></li>
                     <li><a id="schedule" data-icon="info" data-iconpos="bottom">Schema</a></li>
                     <li><a id="gallery" data-icon="grid" data-iconpos="bottom">Galleri</a></li>
                 </ul>
@@ -57,12 +56,18 @@
 
 
     <script>
-
         var loadPosts = function() {
             $('#newscontent').load('http://www.schillerskaselevkar.se/loadposts.php');
         }
+
         var loadGallery = function() {
             $('#gallerycontent').load('http://www.schillerskaselevkar.se/loadgallery.php')
+        }
+
+        var firstLoad = function() {
+            $('#content').load('http://www.schillerskaselevkar.se/loadposts.php');
+            loadGallery();
+            loadPosts();            
         }
 
         var homeContent = function() {
@@ -82,12 +87,9 @@
         $("#gallery").click(function(){
             galleryContent();
         });
-
-        $(document).ready(function(){
-            loadPosts();
-            loadGallery();
+        $(document).bind('pageinit', function(){
+            firstLoad();
         });
-
     </script>
     <script type="text/javascript" src="cordova.js"></script>
 </body>
