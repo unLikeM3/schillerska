@@ -47,16 +47,7 @@
     <!-- Schema sidan -->
     <div id="three" data-role="page">
 
-        <div id="schedulecontent" data-role="content" data-theme="b">
-            Personnummer: <input type="text" id="pnr" placeholder="YYMMDDXXXX"> 
-            Period: 
-            <select id="period">
-                <option value="HT">HT</option>
-                <option value="VT">VT</option>
-            </select> <br>
-            <a href="#" data-role="button" onclick="fetchSchedule(); return false;">Hämta schema</a>
-            <div id="schedulecontainer" class="schemabild"></div>
-        </div><!-- /content -->
+    </div><!-- /content -->
  
     </div><!-- /page -->
     <!-- Galleri sidan -->
@@ -72,28 +63,22 @@
 
 
     <script>
-        var loadPosts = function() {
-            $('#newscontent').load('http://www.schillerskaselevkar.se/loadposts.php');
-        }
 
-        var loadGallery = function() {
-            $('#gallerycontent').load('http://www.schillerskaselevkar.se/loadgallery.php')
-        }
 
         var firstLoad = function() {
-            $('#content').load('http://www.schillerskaselevkar.se/loadposts.php');
-            loadGallery();
-            loadPosts();            
+            homeContent();     
+        }
+
+        var galleryContent = function() {
+            $('#content').load('http://www.schillerskaselevkar.se/loadgallery.php', function(){
+                $('#content').trigger("create");
+            });
         }
 
         var homeContent = function() {
-            $("#content").html($('#newscontent').html());
-            $("#title").html("Nyheter");            
-        }
-
-        var galleryContent = function(){
-            $("#content").html($('#gallerycontent').html());
-            $("#title").html("Galleri");            
+            $('#content').load('http://www.schillerskaselevkar.se/loadposts.php', function(){
+                $('#content').trigger("create");
+            });
         }
 
         var scheduleContent = function(){
