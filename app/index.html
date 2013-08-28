@@ -15,7 +15,7 @@
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
             <h1 id="title"></h1>
-            <a class="ui-btn-right" href="#">Bli Medlem</a>
+            <a id="blimedlembtn" class="ui-btn-right" href="#">Bli Medlem</a>
         </div>
         
         <div id="content" data-role="content" data-theme="b">
@@ -61,6 +61,17 @@
 
     </div><!-- /page -->
 
+    <!-- Bli Medlem -->
+
+    <div id="five" data-role="page">
+        
+        <div id="signupcontent" data-role="content" data-theme="b">
+
+
+
+        </div><!-- /content -->
+
+    </div><!-- /page -->
 
     <script>
 
@@ -91,6 +102,14 @@
             $("#title").html("Schema");            
         }
 
+        var blimedlemContent = function(){
+            
+            $('#content').load("http://www.schillerskaselevkar.se/blimedlem.php", function(){
+                $('#content').trigger("create");
+            });
+            $("#title").html("Bli Medlem");            
+        }
+
         var fetchSchedule = function() {
             var pnr = $('#pnr').val();
             var period = $('#period').val();
@@ -98,6 +117,22 @@
 
             $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period, day: day}, function(data){
                 $('#schedulecontainer').html(data);
+            });
+        }
+
+        var addMember = function(){
+            var fname = $('#fName').val();
+            var lname = $('#lName').val();
+            var persnr = $('#persnr').val();
+            var telnr = $('#telnr').val();
+            var email = $('#email').val();
+            var arskurs = $('#arskurs').val();
+            var acceptTerms = $('#acceptTerms').val();
+
+            console.log(arskurs);
+
+            $.post("http://www.schillerskaselevkar.se/memberhandler.php", {fornamn: fname, efternamn: lname, persnr: persnr, email: email, arskurs: arskurs, telnr: telnr, acceptTerms: acceptTerms}, function(data){
+                    console.log(data);
             });
         }
 
@@ -111,6 +146,10 @@
 
         $("#schedule").click(function(){
             scheduleContent();
+        });
+
+        $("#blimedlembtn").click(function(){
+            blimedlemContent();
         });
 
         $(document).bind('pageinit', function(){
