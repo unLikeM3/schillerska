@@ -75,17 +75,15 @@
         </div><!-- /content -->
 
     </div><!-- /page -->
-        
+
 
     <script>
-        var currentPage = -1;
-
-
         var firstLoad = function() {
             homeContent();     
         }
 
         var galleryContent = function() {
+            $('#content').html("");
             $('#content').load("http://www.schillerskaselevkar.se/gallery.php", function(){
                 $('#content').trigger("create");
             });
@@ -93,7 +91,7 @@
         }
 
         var homeContent = function() {
-            $('#content').load('http://www.schillerskaselevkar.se/loadposts.php', function(){
+            $('#content').load('http://www.schillerskaselevkar.se/posts.php', function(){
                 $('#content').trigger("create");
             });
             $("#title").html("Nyheter");
@@ -140,15 +138,6 @@
                 popup.html(data);
                 
                 $('#lnkpopup').click();
-            });
-        }
-
-        var switchPage = function(newPage){
-            currentPage += newPage;
-
-            $.post("http://www.schillerskaselevkar.se/loadgallery2.php", {page: currentPage}, function(data){
-                $('#content').append(data);
-                $('#content').append($('#btn').html());
             });
         }
 

@@ -29,8 +29,8 @@
 			                  // so we don't run it multiple times
 			
 			// Custom messages based on settings
-			if($settings.scroll == true) $initmessage = 'Scroll for more or click here';
-			else $initmessage = 'Click for more';
+			if($settings.scroll == true) $initmessage = 'Loading...';
+			else $initmessage = 'Klicka för mer';
 			
 			// Append custom messages and extra UI
 			$this.append('<div class="content"></div><div class="loading-bar">'+$initmessage+'</div>');
