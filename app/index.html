@@ -82,7 +82,10 @@
         }
 
         var scheduleContent = function(){
-            $("#content").html($('#schedulecontent').html());
+            
+            $('#content').load("http://www.schillerskaselevkar.se/schema.php", function(){
+                $('#content').trigger("create");
+            });
             $("#title").html("Schema");            
         }
 
