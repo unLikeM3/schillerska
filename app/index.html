@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/energize-min.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/jscroll.js"></script>
 
 </head>
 <body>
@@ -74,11 +75,7 @@
         </div><!-- /content -->
 
     </div><!-- /page -->
-
-    <div id="btn">
-        <a href='#' data-role='button' onclick='switchPage(1); return false;'>Load more</a>
-    </div>
-    
+        
 
     <script>
         var currentPage = -1;
@@ -89,7 +86,7 @@
         }
 
         var galleryContent = function() {
-            $('#content').load("#btn", function(){
+            $('#content').load("http://www.schillerskaselevkar.se/gallery.php", function(){
                 $('#content').trigger("create");
             });
             $("#title").html("Galleri");
