@@ -57,8 +57,9 @@
         <div id="gallerycontent" data-role="content" data-theme="b">
 
 
-
         </div><!-- /content -->
+        
+
 
     </div><!-- /page -->
 
@@ -74,10 +75,13 @@
 
     </div><!-- /page -->
 
-    <!-- Popup Box -->
+    <div id="btn">
+        <a href='#' data-role='button' onclick='switchPage(1); return false;'>Load more</a>
+    </div>
     
 
     <script>
+        var currentPage = -1;
 
 
         var firstLoad = function() {
@@ -85,7 +89,7 @@
         }
 
         var galleryContent = function() {
-            $('#content').load('http://www.schillerskaselevkar.se/loadgallery.php', function(){
+            $('#content').load("#btn", function(){
                 $('#content').trigger("create");
             });
             $("#title").html("Galleri");
@@ -139,6 +143,15 @@
                 popup.html(data);
                 
                 $('#lnkpopup').click();
+            });
+        }
+
+        var switchPage = function(newPage){
+            currentPage += newPage;
+
+            $.post("http://www.schillerskaselevkar.se/loadgallery2.php", {page: currentPage}, function(data){
+                $('#content').append(data);
+                $('#content').append($('#btn').html());
             });
         }
 
