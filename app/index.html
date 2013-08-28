@@ -14,7 +14,7 @@
     <div id="one" data-role="page">
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
-            <h1 id="title">Nyheter</h1>
+            <h1 id="title"></h1>
             <a class="ui-btn-right" href="#">Bli Medlem</a>
         </div>
         
@@ -73,12 +73,14 @@
             $('#content').load('http://www.schillerskaselevkar.se/loadgallery.php', function(){
                 $('#content').trigger("create");
             });
+            $("#title").html("Galleri");
         }
 
         var homeContent = function() {
             $('#content').load('http://www.schillerskaselevkar.se/loadposts.php', function(){
                 $('#content').trigger("create");
             });
+            $("#title").html("Nyheter");
         }
 
         var scheduleContent = function(){
