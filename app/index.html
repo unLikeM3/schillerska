@@ -91,7 +91,7 @@
         }
 
         var homeContent = function() {
-            $('#content').load('http://www.schillerskaselevkar.se/posts.php', function(){
+            $('#content').load('http://www.schillerskaselevkar.se/loadposts.php', function(){
                 $('#content').trigger("create");
             });
             $("#title").html("Nyheter");
