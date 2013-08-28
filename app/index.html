@@ -74,26 +74,14 @@
 
     </div><!-- /page -->
 
-    <!-- Dialog Box -->
-    <div id="dialog" data-role="dialog">
-        <div id="dialogcontent" data-role="content">
-            
-        </div>
-        <div id="dialogfooter" data-role="footer">
-            <a href="#" onclick="closeDialog();">Close</a>
-        </div>
-    </div> <!-- /dialog -->
+    <!-- Popup Box -->
+    
 
     <script>
 
 
         var firstLoad = function() {
             homeContent();     
-        }
-
-        var closeDialog = function(){
-            $.mobile.changePage('#one', {transition: 'pop', role: 'page'});
-            blimedlemContent();
         }
 
         var galleryContent = function() {
@@ -144,13 +132,13 @@
             var email = $('#email').val();
             var arskurs = $('#arskurs').val();
             var acceptTerms = $('#acceptTerms').val();
-            var dialog = $('#dialogcontent');
+            var popup = $('#popup');
+            var lnkpopup = $('#lnkpopup');
 
             $.post("http://www.schillerskaselevkar.se/memberhandler.php", {fornamn: fname, efternamn: lname, persnr: persnr, email: email, arskurs: arskurs, telnr: telnr, acceptTerms: acceptTerms}, function(data){
-                dialog.html("");
-                dialog.prepend(data+"<br>");
+                popup.html(data);
                 
-                $.mobile.changePage('#dialog', {transition: 'pop', role: 'dialog'});
+                $('#lnkpopup').click();
             });
         }
 
