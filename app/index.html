@@ -92,9 +92,9 @@
         var fetchSchedule = function() {
             var pnr = $('#pnr').val();
             var period = $('#period').val();
-            var dag = $('#dag').val();
+            var day = $('#day').val();
 
-            $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period, dag: dag}, function(data){
+            $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period, day: day}, function(data){
                 $('#schedulecontainer').html(data);
             });
         }
