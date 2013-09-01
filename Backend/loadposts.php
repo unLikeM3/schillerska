@@ -10,12 +10,12 @@
 
 		<p>
 			<div class="inlagg">
-				<div class="wrapper">    
+				<div class="inlaggwrapper wrapper">    
 					<div class="title">
-						<h2><?php echo $row['post_title']; ?> - <?php echo $row['ID']; ?></h2>
+						<h2><?php echo $row['post_title']; ?></h2>
 					</div>
 
-					<div class="content">
+					<div class="inlaggcontent">
 						<?php echo $row['post_content'];?>
 					</div>
 				</div>
