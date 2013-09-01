@@ -83,7 +83,7 @@
 						busy = true;
 						
 						// Tell the user we're loading posts
-						$this.find('.loading-bar').html('Loading Posts');
+						$this.find('.loading-bar').html('Laddar...');
 						
 						// Run the function to fetch the data inside a delay
 						// This is useful if you have content in a footer you
