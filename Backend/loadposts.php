@@ -8,17 +8,17 @@
 	$query = mysql_query("SELECT * FROM _posts WHERE post_status='publish' AND post_type='post' ORDER BY post_date DESC LIMIT ".$postnumbers." OFFSET ".$offset);
 	while ($row = mysql_fetch_assoc($query)) { ?>
 
-		<div>
-		<div class="inlagg">
-			<div class="wrapper">    
-				<div class="title">
-					<h2><?php echo $row['post_title']; ?></h2>
-				</div>
+		<p>
+			<div class="inlagg">
+				<div class="wrapper">    
+					<div class="title">
+						<h2><?php echo $row['post_title']; ?> - <?php echo $row['ID']; ?></h2>
+					</div>
 
-				<div class="content">
-					<?php echo $row['post_content'];?>
+					<div class="content">
+						<?php echo $row['post_content'];?>
+					</div>
 				</div>
 			</div>
-		</div>
-		</div>
+		</p>
 	<?php } ?>
