@@ -20,7 +20,7 @@
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <h1 id="title"></h1>
-            <a id="blimedlembtn" class="ui-btn-right" href="#">Bli Medlem</a>
+            <a id="blimedlembtn" onclick="showAlert(); return false;" class="ui-btn-right" href="#">Bli Medlem</a>
         </div>
         
         <div id="content" data-role="content">
@@ -40,6 +40,12 @@
     </div><!-- /page -->
 
     <script>
+        var alertDismissed = function(){
+
+        }
+        var showAlert = function() {
+            navigator.notification.alert('message',alertDismissed, 'Game Over','ButtonName');
+        }
         var startTest = function() {
             $('body').imagesLoaded(function($images, $proper, $broken ) {
 
