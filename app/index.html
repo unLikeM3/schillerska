@@ -7,7 +7,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />    
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
     <script type="text/javascript" src="js/energize-min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="js/imgcache.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
     <script type="text/javascript" src="js/jscroll.js"></script>
 
@@ -37,6 +40,35 @@
     </div><!-- /page -->
 
     <script>
+        var startTest = function() {
+            $('body').imagesLoaded(function($images, $proper, $broken ) {
+
+                // see console output for debug info
+                ImgCache.options.debug = true;
+                ImgCache.options.usePersistentCache = true;
+    
+                ImgCache.init(function() {
+                    // 1. cache images
+                    for (var i = 0; i < $proper.length; i++) {
+                        ImgCache.cacheFile($($proper[i]).attr('src'));
+                    }
+                    // 2. broken images get replaced
+                    for (var i = 0; i < $broken.length; i++) {
+                        ImgCache.useCachedFile($($broken[i]));
+                    }
+
+                });
+            });
+        };
+
+        if (typeof(cordova) !== 'undefined') {
+            // cordova test
+            document.addEventListener('deviceready', startTest, false);
+        } else {
+            // normal browser test
+            $(document).ready(startTest);
+        }
+
         var firstLoad = function() {
             homeContent();     
         }
@@ -122,6 +154,5 @@
             firstLoad();
         });
     </script>
-    <script type="text/javascript" src="phonegap.js"></script>
 </body>
 </html>
