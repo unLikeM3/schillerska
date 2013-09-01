@@ -29,7 +29,7 @@
 			                  // so we don't run it multiple times
 			
 			// Custom messages based on settings
-			if($settings.scroll == true) $initmessage = 'Loading...';
+			if($settings.scroll == true) $initmessage = 'Laddar...';
 			else $initmessage = 'Klicka för mer';
 			
 			// Append custom messages and extra UI
