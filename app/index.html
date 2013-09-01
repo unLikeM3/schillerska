@@ -36,47 +36,6 @@
  
     </div><!-- /page -->
 
-    <!-- Nyheter sidan -->
-    <div id="two" data-role="page">
-
-        <div id="newscontent" data-role="content" data-theme="b">
-
-            
-        </div><!-- /content -->
- 
-    </div><!-- /page --> 
-
-    <!-- Schema sidan -->
-    <div id="three" data-role="page">
-
-    </div><!-- /content -->
- 
-    </div><!-- /page -->
-    <!-- Galleri sidan -->
-    <div id="four" data-role="page">
-        
-        <div id="gallerycontent" data-role="content" data-theme="b">
-
-
-        </div><!-- /content -->
-        
-
-
-    </div><!-- /page -->
-
-    <!-- Bli Medlem -->
-
-    <div id="five" data-role="page">
-        
-        <div id="signupcontent" data-role="content" data-theme="b">
-
-
-
-        </div><!-- /content -->
-
-    </div><!-- /page -->
-
-
     <script>
         var firstLoad = function() {
             homeContent();     
@@ -91,22 +50,23 @@
         }
 
         var homeContent = function() {
-            $('#content').load('http://www.schillerskaselevkar.se/loadposts.php', function(){
+            $('#content').html("");
+            $('#content').load('http://www.schillerskaselevkar.se/posts.php', function(){
                 $('#content').trigger("create");
             });
             $("#title").html("Nyheter");
+
         }
 
         var scheduleContent = function(){
-            
-            $('#content').load("http://www.schillerskaselevkar.se/schema.php", function(){
-                $('#content').trigger("create");
+            $('#content').load('http://www.schillerskaselevkar.se/schema.php', function(){
+                $('#content').trigger('create');
             });
             $("#title").html("Schema");            
         }
 
         var blimedlemContent = function(){
-            
+            $('#content').html("");
             $('#content').load("http://www.schillerskaselevkar.se/blimedlem.php", function(){
                 $('#content').trigger("create");
             });

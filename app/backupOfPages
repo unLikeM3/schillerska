@@ -1,0 +1,40 @@
+<div id="two" data-role="page">
+
+        <div id="newscontent" data-role="content" data-theme="b">
+
+            
+        </div><!-- /content -->
+ 
+    </div><!-- /page --> 
+
+    <!-- Schema sidan -->
+    <div id="three" data-role="page">
+        <div id="schedulecontent" data-thema="b">
+            
+        </div>
+
+    </div><!-- /content -->
+ 
+    </div><!-- /page -->
+    <!-- Galleri sidan -->
+    <div id="four" data-role="page">
+        <div id="gallerycontent" data-role="content" data-theme="b">
+
+
+        </div><!-- /content -->
+        
+
+
+    </div><!-- /page -->
+
+    <!-- Bli Medlem -->
+
+    <div id="five" data-role="page">
+        
+        <div id="signupcontent" data-role="content" data-theme="b">
+
+
+
+        </div><!-- /content -->
+
+    </div><!-- /page -->
