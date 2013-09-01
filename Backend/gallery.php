@@ -6,7 +6,7 @@
             $('#pager').scrollPagination({
                 nop: 5,
                 offset: 0,
-                error: 'Thou shall not pass!',
+                error: 'Inga fler bilder!',
                 delay: 500,
                 scroll: true
             }, "http://www.schillerskaselevkar.se/ajax.php");

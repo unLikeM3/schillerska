@@ -6,7 +6,7 @@
             $('#pagerpost').scrollPagination({
                 nop: 10,
                 offset: 0,
-                error: 'Thou shall not pass!',
+                error: 'Inga fler inlägg!',
                 delay: 500,
                 scroll: true
             }, "http://www.schillerskaselevkar.se/loadposts.php");
