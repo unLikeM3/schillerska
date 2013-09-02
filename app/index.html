@@ -48,7 +48,10 @@
             $("#title").html("Nyheter");
 
         }
-        homeContent();
+        $(document).bind('pageinit', function(){
+            $.mobile.buttonMarkup.hoverDelay = 0;
+            homeContent();
+        });
     </script>
 </body>
 </html>

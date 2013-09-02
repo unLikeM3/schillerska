@@ -65,8 +65,10 @@
             });
             $("#title").html("Bli Medlem");            
         }
-
-        blimedlemContent();
+        $(document).bind('pageinit', function(){
+            $.mobile.buttonMarkup.hoverDelay = 0;
+            blimedlemContent();
+        });
     </script>
 </body>
 </html>

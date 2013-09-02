@@ -47,8 +47,10 @@
             });
             $("#title").html("Galleri");
         }
-
-        galleryContent();
+        $(document).bind('pageinit', function(){
+            $.mobile.buttonMarkup.hoverDelay = 0;
+            galleryContent();
+        });
     </script>
 </body>
 </html>

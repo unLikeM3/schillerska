@@ -19,7 +19,7 @@
     <div data-role="page" data-dom-cache="true" data-theme="b">
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <h1 id="title">Galleri</h1>
+            <h1 id="title">Schema</h1>
             <a id="blimedlembtn" class="ui-btn-right" href="#">Bli Medlem</a>
         </div>
         
@@ -56,8 +56,10 @@
             });
             $("#title").html("Schema");            
         }
-
-        scheduleContent();
+        $(document).bind('pageinit', function(){
+            $.mobile.buttonMarkup.hoverDelay = 0;
+            scheduleContent();
+        });
     </script>
 </body>
 </html>
