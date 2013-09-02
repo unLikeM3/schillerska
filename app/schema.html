@@ -57,10 +57,17 @@
             </div>
         </div><!-- /footer -->
      <script>
+
+        if (window.localStorage.getItem('pnr') != "undefined" && window.localStorage.getItem('pnr') != null) {
+            $('#pnr').val(window.localStorage.getItem('pnr'));
+        };
+
         var fetchSchedule = function() {
             var pnr = $('#pnr').val();
             var period = $('#period').val();
             var day = $('#day').val();
+
+            window.localStorage.setItem('pnr', pnr);
 
             $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period, day: day}, function(data){
                 $('#schedulecontainer').html(data);
