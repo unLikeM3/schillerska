@@ -19,7 +19,7 @@
     <div data-role="page" data-theme="b">
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <h1 id="title">Nyheter</h1>
+            <h1 id="title">Galleri</h1>
             <a id="blimedlembtn" class="ui-btn-right" href="#">Bli Medlem</a>
         </div>
         
@@ -30,9 +30,9 @@
         <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div data-role="navbar">
                 <ul>
-                    <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active ui-state-persist" href="index.html">Nyheter</a></li>
+                    <li><a id="home" data-icon="home" data-iconpos="bottom" href="index.html">Nyheter</a></li>
                     <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="schema.html">Schema</a></li>
-                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" href="gallery.html">Galleri</a></li>
+                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" class="ui-btn-active ui-state-persist" href="gallery.html">Galleri</a></li>
                 </ul>
             </div>
         </div><!-- /footer -->
@@ -40,15 +40,15 @@
     </div><!-- /page -->
 
     <script>
-        var homeContent = function() {
+        var galleryContent = function() {
             $('#content').html("");
-            $('#content').load('http://www.schillerskaselevkar.se/posts.php', function(){
+            $('#content').load("http://www.schillerskaselevkar.se/gallery.php", function(){
                 $('#content').trigger("create");
             });
-            $("#title").html("Nyheter");
-
+            $("#title").html("Galleri");
         }
-        homeContent();
+
+        galleryContent();
     </script>
 </body>
 </html>
