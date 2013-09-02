@@ -17,6 +17,7 @@
         $(document).on("mobileinit", function(){
             $.mobile.allowCrossDomainPages = true;
             $.support.cors = true;
+            $.mobile.buttonMarkup.hoverDelay = 0;
         });
     </script>
 </head>
@@ -51,10 +52,7 @@
             $("#title").html("Nyheter");
 
         }
-        $(document).bind('pageinit', function(){
-            $.mobile.buttonMarkup.hoverDelay = 0;
             homeContent();
-        });
     </script>
 </body>
 </html>
