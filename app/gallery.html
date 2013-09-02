@@ -39,7 +39,6 @@
 
     <script>
         var galleryContent = function() {
-            $('#content').html("");
             $('#content').load("http://www.schillerskaselevkar.se/gallery.php", function(){
                 $('#content').trigger("create");
             });

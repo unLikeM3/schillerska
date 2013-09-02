@@ -57,7 +57,6 @@
         }
 
         var blimedlemContent = function(){
-            $('#content').html("");
             $('#content').load("http://www.schillerskaselevkar.se/blimedlem.php", function(){
                 $('#content').trigger("create");
             });

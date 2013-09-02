@@ -45,7 +45,6 @@
     </div><!-- /page -->
     <script>
         var homeContent = function() {
-            $('#content').html("");
             $('#content').load('http://www.schillerskaselevkar.se/posts.php', function(){
                 $('#content').trigger("create");
             });
