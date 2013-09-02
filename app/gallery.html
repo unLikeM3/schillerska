@@ -20,11 +20,11 @@
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <h1 id="title">Galleri</h1>
-            <a id="blimedlembtn" class="ui-btn-right" href="#">Bli Medlem</a>
+            <a id="blimedlembtn" class="ui-btn-right" href="blimedlem.html">Bli Medlem</a>
         </div>
         
         <div id="content" data-role="content">
-
+            <div id="pager"></div>
         </div><!-- /content -->
  
         <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -38,14 +38,14 @@
         </div><!-- /footer -->
 
     <script>
-        var galleryContent = function() {
-            $('#content').load("http://www.schillerskaselevkar.se/gallery.php", function(){
-                $('#content').trigger("create");
-            });
-            $("#title").html("Galleri");
-        }
-
-        galleryContent();
+        $("#title").html("Galleri");
+        $('#pager').scrollPagination({
+            nop: 5,
+            offset: 0,
+            error: 'Inga fler bilder!',
+            delay: 500,
+            scroll: true
+        }, "http://www.schillerskaselevkar.se/ajax.php");
     </script>
     </div><!-- /page -->
 
