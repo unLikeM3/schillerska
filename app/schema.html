@@ -69,6 +69,8 @@
 
             window.localStorage.setItem('pnr', pnr);
 
+            $('#schedulecontainer').html('<div id="spinner"><img src="res/img/spinner.gif"></div>');
+
             $.post("http://www.schillerskaselevkar.se/loadschedule.php", {pnr: pnr, period: period, day: day}, function(data){
                 $('#schedulecontainer').html(data);
             });
