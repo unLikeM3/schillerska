@@ -53,7 +53,7 @@ CSS för inlägg
 	-khtml-opacity: 1.0;
 }
 
-.inlagg .wrapper .content img {
+.inlagg .wrapper .content a img {
 	width:100%;
 	height:auto;
 	margin-right: auto;
