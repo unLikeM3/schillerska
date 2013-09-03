@@ -40,6 +40,7 @@ CSS för inlägg
 .inlagg .wrapper .title h2 {
 	font-size: 20px;
 	font-weight: bold;
+	padding-bottom: 10px;
 }
 
 .inlagg .wrapper .content {
