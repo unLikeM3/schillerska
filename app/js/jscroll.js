@@ -29,7 +29,7 @@
 			                  // so we don't run it multiple times
 			
 			// Custom messages based on settings
-			if($settings.scroll == true) $initmessage = 'Laddar...';
+			if($settings.scroll == true) $initmessage = '<div id="spinner"><img src="res/img/spinner.gif"></div>';
 			else $initmessage = 'Klicka för mer';
 			
 			// Append custom messages and extra UI
@@ -83,7 +83,7 @@
 						busy = true;
 						
 						// Tell the user we're loading posts
-						$this.find('.loading-bar').html('Laddar...');
+						$this.find('.loading-bar').html('<div id="spinner"><img src="res/img/spinner.gif"></div>');
 						
 						// Run the function to fetch the data inside a delay
 						// This is useful if you have content in a footer you
