@@ -53,6 +53,10 @@ CSS för inlägg
 	-khtml-opacity: 1.0;
 }
 
+.inlagg .wrapper .content img {
+	width:80%;
+}
+
 .inlagg .wrapper .meta {
 
 }
