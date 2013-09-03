@@ -20,6 +20,7 @@
             $.support.cors = true;
             $.mobile.buttonMarkup.hoverDelay = 0;
             $.mobile.defaultPageTransition = 'none';
+            $.mobile.page.prototype.options.domCache = true;
         });
     </script>
 
@@ -44,8 +45,8 @@
             <div data-role="navbar">
                 <ul>
                     <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active ui-state-persist" href="index.html">Nyheter</a></li>
-                    <li><a id="schedule" data-ajax="false" data-icon="info" data-iconpos="bottom" href="schema.html">Schema</a></li>
-                    <li><a id="gallery" data-ajax="false" data-icon="grid" data-iconpos="bottom" href="gallery.html">Galleri</a></li>
+                    <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="schema.html">Schema</a></li>
+                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" href="gallery.html">Galleri</a></li>
                 </ul>
             </div>
         </div><!-- /footer -->
