@@ -60,6 +60,13 @@ CSS för inlägg
 	margin-left: auto;
 }
 
+.inlagg .wrapper .content iframe {
+	width:100%;
+	height:auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .inlagg .wrapper .meta {
 
 }
