@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Schillerskas Elevkår</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />    
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="js/jscroll.js"></script>
 
     <script type="text/javascript">
-        $(document).on("mobileinit", function(){
+        $(document).bind("mobileinit", function(){
             $.mobile.allowCrossDomainPages = true;
             $.support.cors = true;
             $.mobile.buttonMarkup.hoverDelay = 0;
@@ -27,7 +27,7 @@
 <body>
     <div data-role="page" data-theme="b">
  
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
+        <div data-role="header" data-tap-toggle="false" data-theme="a">
             <h1 id="title">Nyheter</h1>
             <a id="blimedlembtn" class="ui-btn-right" href="blimedlem.html">Bli Medlem</a>
         </div>
@@ -40,7 +40,7 @@
             </script>
         </div><!-- /content -->
  
-        <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+        <div data-role="footer" data-tap-toggle="false" data-theme="a">
             <div data-role="navbar">
                 <ul>
                     <li><a id="home" data-icon="home" data-iconpos="bottom" class="ui-btn-active ui-state-persist" href="index.html">Nyheter</a></li>
