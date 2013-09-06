@@ -18,6 +18,10 @@
 					<div class="inlaggcontent">
 						<?php echo $row['post_content'];?>
 					</div>
+
+					<div class="meta">
+						<br>Skrivet: <?php echo $row['post_date']; ?>
+					</div>
 				</div>
 			</div>
 		</p>
