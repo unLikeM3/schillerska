@@ -11,6 +11,14 @@
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
     <script type="text/javascript" src="js/imgcache.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function(){
+            $.mobile.allowCrossDomainPages = true;
+            $.support.cors = true;
+            $.mobile.buttonMarkup.hoverDelay = 0;
+            $.mobile.defaultPageTransition = 'none';
+        });
+    </script>
     <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
     <script type="text/javascript" src="js/jscroll.js"></script>
 
@@ -60,7 +68,7 @@
 
     <div id="two" data-role="page" data-theme="b">
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <a href="#one" data-icon="back">Föregående</a>
+            <a href="#one" data-icon="back"></a>
             <h1 id="title">Bli Medlem</h1>
         </div>
         
@@ -92,7 +100,7 @@
     <div id="three" data-role="page" data-theme="b">
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <a href="#two" data-icon="back">Föregående</a>
+            <a href="#two" data-icon="back"></a>
             <h1 id="title">Bli Medlem</h1>
         </div>
         
