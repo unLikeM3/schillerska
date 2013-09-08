@@ -27,9 +27,19 @@
             <div>
                 <div class="ui-block-solo"> <input type="text" id="fName" placeholder="Förnamn"> </div>
                 <div class="ui-block-solo"> <input type="text" id="lName" placeholder="Efternamn"> </div>
+                <div class="ui-block-solo"> <input type="text" id="coorg" placeholder="Företag/Org."> </div>
                 <div class="ui-block-solo"> <input type="text" id="persnr" placeholder="Personnummer (YYMMDDXXXX)"> </div>
+                <div class="ui-block-solo"> <input type="text" id="adress" placeholder="Adress"> </div>
+                <div class="ui-block-solo"> <input type="text" id="ort" placeholder="Ort"> </div>
                 <div class="ui-block-solo"> <input type="text" id="telnr" placeholder="Telefonnummer (07XXXXXXXX)"> </div>
+                <div class="ui-block-solo"> <input type="text" id="alttelnr" placeholder="Alt. Telefonnummer (07XXXXXXXX)"> </div>
                 <div class="ui-block-solo"> <input type="email" id="email" placeholder="du@nagat.se"> </div>
+                <div class="ui-block-solo">
+                    <select id="kon">
+                        <option value="man">Juridisk Man</option>
+                        <option value="kvinna">Juridisk Kvinna</option>
+                    </select>
+                </div>
                 <div class="ui-block-solo">
                     <select id="arskurs">
                         <option value="1">Årskurs 1</option>
@@ -75,8 +85,13 @@
             var acceptTerms = $('#acceptTerms').val();
             var popup = $('#popup');
             var lnkpopup = $('#lnkpopup');
+            var co = $('#co').val();
+            var adress = $('#adress').val();
+            var ort = $('#ort').val();
+            var alttelnr = $('#alttelnr').val();
+            var kon = $('#kon').val();
 
-            $.post("http://www.schillerskaselevkar.se/memberhandler.php", {fornamn: fname, efternamn: lname, persnr: persnr, email: email, arskurs: arskurs, telnr: telnr, acceptTerms: acceptTerms}, function(data){
+            $.post("http://www.schillerskaselevkar.se/memberhandler.php", {fornamn: fname, efternamn: lname, persnr: persnr, email: email, arskurs: arskurs, telnr: telnr, acceptTerms: acceptTerms, co: co, adress: adress, ort: ort, alttelnr: alttelnr, kon: kon}, function(data){
                 popup.html(data);
                 
                 $('#lnkpopup').click();
