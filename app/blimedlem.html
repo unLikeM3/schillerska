@@ -11,62 +11,14 @@
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
     <script type="text/javascript" src="js/imgcache.js"></script>
-    <script type="text/javascript">
-        $(document).bind("mobileinit", function(){
-            $.mobile.allowCrossDomainPages = true;
-            $.support.cors = true;
-            $.mobile.buttonMarkup.hoverDelay = 0;
-            $.mobile.defaultPageTransition = 'none';
-        });
-    </script>
     <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.subpage.js"></script>
     <script type="text/javascript" src="js/jscroll.js"></script>
 
 </head>
 <body>
     <div id="one" data-role="page" data-theme="b">
- 
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <h1 id="title">Bli Medlem</h1>
-        </div>
-        
-        <div id="content" data-role="content">
-            <div>
-                <div class="ui-block-solo"> <input type="text" id="fName" placeholder="Förnamn"> </div>
-                <div class="ui-block-solo"> <input type="text" id="lName" placeholder="Efternamn"> </div>
-                <div class="ui-block-solo"> <input type="text" id="persnr" placeholder="Personnummer (YYMMDDXXXX)"> </div>
-                <div class="ui-block-solo">
-                    <select id="kon">
-                        <option>Kön</option>
-                        <option value="man">Juridisk Man</option>
-                        <option value="kvinna">Juridisk Kvinna</option>
-                    </select>
-                </div>   
-                <div class="ui-block-solo">
-                    <select id="arskurs">
-                        <option value="1">Årskurs 1</option>
-                        <option value="2">Årskurs 2</option>
-                        <option value="3">Årskurs 3</option>
-                    </select>
-                </div>
-                <div class="ui-block-solo">
-                    <a href="#two" data-role="button" data-icon="arrow-r" data-iconpos="right">Nästa</a>
-                </div>
-            </div>
-        </div><!-- /content -->
- 
-        <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <div data-role="navbar">
-                <ul>
-                    <li><a id="home" data-icon="home" data-iconpos="bottom" href="index.html">Nyheter</a></li>
-                    <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="schema.html">Schema</a></li>
-                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" href="gallery.html">Galleri</a></li>
-                </ul>
-            </div>
-        </div><!-- /footer -->
-    </div><!-- /page -->
-
-    <div id="two" data-role="page" data-theme="b">
+    <div id="two" data-role="subpage" data-theme="b">
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <a href="#one" data-icon="back">Tillbaka</a>
             <h1 id="title">Bli Medlem</h1>
@@ -97,7 +49,7 @@
         </div><!-- /footer -->
     </div><!-- /page -->
 
-    <div id="three" data-role="page" data-theme="b">
+    <div id="three" data-role="subpage" data-theme="b">
  
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <a href="#two" data-icon="back">Tillbaka</a>
@@ -564,7 +516,45 @@
             </div>
         </div><!-- /footer -->
     </div><!-- /page -->
-
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
+            <h1 id="title">Bli Medlem</h1>
+        </div>
+        
+        <div id="content" data-role="content">
+            <div>
+                <div class="ui-block-solo"> <input type="text" id="fName" placeholder="Förnamn"> </div>
+                <div class="ui-block-solo"> <input type="text" id="lName" placeholder="Efternamn"> </div>
+                <div class="ui-block-solo"> <input type="text" id="persnr" placeholder="Personnummer (YYMMDDXXXX)"> </div>
+                <div class="ui-block-solo">
+                    <select id="kon">
+                        <option>Kön</option>
+                        <option value="man">Juridisk Man</option>
+                        <option value="kvinna">Juridisk Kvinna</option>
+                    </select>
+                </div>   
+                <div class="ui-block-solo">
+                    <select id="arskurs">
+                        <option value="1">Årskurs 1</option>
+                        <option value="2">Årskurs 2</option>
+                        <option value="3">Årskurs 3</option>
+                    </select>
+                </div>
+                <div class="ui-block-solo">
+                    <a href="#two" data-role="button" data-icon="arrow-r" data-iconpos="right">Nästa</a>
+                </div>
+            </div>
+        </div><!-- /content -->
+ 
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a id="home" data-icon="home" data-iconpos="bottom" href="index.html">Nyheter</a></li>
+                    <li><a id="schedule" data-icon="info" data-iconpos="bottom" href="schema.html">Schema</a></li>
+                    <li><a id="gallery" data-icon="grid" data-iconpos="bottom" href="gallery.html">Galleri</a></li>
+                </ul>
+            </div>
+        </div><!-- /footer -->
+    </div><!-- /page -->
 
     <script>
         var addMember = function(){
