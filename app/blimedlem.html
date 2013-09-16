@@ -492,22 +492,14 @@
                 </div>
             </div>
             </div>
-            <div class="ui-block-solo">
-                <label><input type="checkbox" name="acceptTerms" id="acceptTerms" value="1" /> Jag accepterar stadgarna </label>
-            </div>
-
-            <div id="blimedlemsub" class="ui-block-solo hidden">
-                <button onclick="addMember(); return false;">Bli Medlem!</button>
+            <div id="blimedlemsub" class="ui-block-solo">
+                <button onclick="addMember(); return false;">Jag accepterar stadgarna och<br>vill bli medlem</button>
             </div>              
 
             <a id="lnkpopup" href="#popup" data-rel="popup" data-position-to="window" style="display:none;"></a>
             <div id="popup" data-role="popup" data-overlay-theme="a" class="ui-content">
                 <p>POPUUUUP</p>
             </div>
-
-            <script type="text/javascript">
-                
-            </script>
 
         </div><!-- /content -->
  
@@ -584,17 +576,6 @@
                 $('#lnkpopup').click();
             });
         }
-        
-        var checkbox = $('#acceptTerms');
-        var subbtn = $('#blimedlemsub');
-
-        $('#acceptTerms').change(function(){
-            if($('#acceptTerms').attr('checked')){
-                $('#blimedlemsub').show();
-            }else{
-                $('#blimedlemsub').hide();
-            }
-        });
     </script>
 
 </body>
