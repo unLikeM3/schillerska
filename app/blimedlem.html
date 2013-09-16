@@ -493,7 +493,7 @@
             </div>
             </div>
             <div class="ui-block-solo">
-                <label><input type="checkbox" name="acceptTerms" id="acceptTerms" value="1" /> Jag accepterar stadgarna </label>
+                <label><input type="checkbox" name="acceptTerms" id="acceptTerms" value="1" onclick="if ($('#acceptTerms').attr('checked')) {$('#blimedlemsub').button('enable');}else{$('#blimedlemsub').button('disable');};" /> Jag accepterar stadgarna </label>
             </div>
 
             <div class="ui-block-solo">
@@ -584,11 +584,7 @@
         var subbtn = $('#blimedlemsub');
         
         checkbox.change(function(){
-            if (checkbox.attr('checked')) {
-                subbtn.button('enable');
-            }else{
-                subbtn.button('disable');
-            }
+            
         });
     </script>
 
