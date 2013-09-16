@@ -493,17 +493,31 @@
             </div>
             </div>
             <div class="ui-block-solo">
-                <label><input type="checkbox" name="acceptTerms" id="acceptTerms" value="1" onclick="if ($('#acceptTerms').attr('checked')) {$('#blimedlemsub').button('enable');}else{$('#blimedlemsub').button('disable');};" /> Jag accepterar stadgarna </label>
+                <label><input type="checkbox" name="acceptTerms" id="acceptTerms" value="1" /> Jag accepterar stadgarna </label>
             </div>
 
-            <div class="ui-block-solo">
-                <button disabled id="blimedlemsub" onclick="addMember(); return false;">Bli Medlem</button>
+            <div id="blimedlemsub" class="ui-block-solo" style="display: none;">
+                <button onclick="addMember(); return false;">Bli Medlem</button>
             </div>              
 
             <a id="lnkpopup" href="#popup" data-rel="popup" data-position-to="window" style="display:none;"></a>
             <div id="popup" data-role="popup" data-overlay-theme="a" class="ui-content">
                 <p>POPUUUUP</p>
             </div>
+
+            <script type="text/javascript">
+                var checkbox = $('#acceptTerms');
+                var subbtn = $('#blimedlemsub');
+
+                checkbox.change(function(){
+                    if(checkbox.attr('checked')){
+                        subbtn.show();
+                    }else{
+                        subbtn.hide();
+                    }
+                });
+            </script>
+
         </div><!-- /content -->
  
         <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -580,12 +594,7 @@
             });
         }
         
-        var checkbox = $('#acceptTerms');
-        var subbtn = $('#blimedlemsub');
         
-        checkbox.change(function(){
-            
-        });
     </script>
 
 </body>
