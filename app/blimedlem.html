@@ -506,16 +506,7 @@
             </div>
 
             <script type="text/javascript">
-                var checkbox = $('#acceptTerms');
-                var subbtn = $('#blimedlemsub');
-
-                checkbox.change(function(){
-                    if(checkbox.attr('checked')){
-                        subbtn.show();
-                    }else{
-                        subbtn.hide();
-                    }
-                });
+                
             </script>
 
         </div><!-- /content -->
@@ -594,7 +585,16 @@
             });
         }
         
-        
+        var checkbox = $('#acceptTerms');
+        var subbtn = $('#blimedlemsub');
+
+        $('#acceptTerms').change(function(){
+            if($('#acceptTerms').attr('checked')){
+                $('#blimedlemsub').show();
+            }else{
+                $('#blimedlemsub').hide();
+            }
+        });
     </script>
 
 </body>
