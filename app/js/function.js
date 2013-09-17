@@ -18,5 +18,6 @@ var addMember = function(){
         popup.html(data);
         
         $('#lnkpopup').click();
+        $('#blimedlemsub').append("Function");
     });
 }
