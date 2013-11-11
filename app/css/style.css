@@ -47,7 +47,7 @@ CSS för inlägg
 	padding-bottom: 10px;
 }
 
-.inlagg .wrapper .content {
+.inlagg .wrapper .content2 {
 	margin-top:10px;
 	color:#000;
 	font-size: 14px;
@@ -57,14 +57,14 @@ CSS för inlägg
 	-khtml-opacity: 1.0;
 }
 
-.inlagg .wrapper .content a img {
+.inlagg .wrapper .content2 a img {
 	width:100%;
 	height:auto;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.inlagg .wrapper .content iframe {
+.inlagg .wrapper .content2 iframe {
 	width:100%;
 	height:auto;
 	margin-right: auto;

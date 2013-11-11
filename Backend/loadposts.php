@@ -21,7 +21,7 @@
 						<h2><?php echo $title; ?></h2>
 					</div>
 
-					<div class="content">
+					<div class="content2">
 						<?php echo $content; ?>
 					</div>
 
