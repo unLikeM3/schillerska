@@ -569,7 +569,20 @@
                 var alttelnr = $('#alttelnr').val();
                 var kon = $('#kon').val();
 
-                $.post("http://www.schillerskaselevkar.se/memberhandler.php", {fornamn: fname, efternamn: lname, persnr: persnr, email: email, arskurs: arskurs, telnr: telnr, acceptTerms: acceptTerms, co: co, adress: adress, ort: ort, alttelnr: alttelnr, kon: kon}, function(data){
+                $.post("http://www.schillerskaselevkar.se/memberhandler.php", {
+                    fornamn: fname, 
+                    efternamn: lname, 
+                    persnr: persnr, 
+                    email: email, 
+                    arskurs: arskurs, 
+                    telnr: telnr, 
+                    acceptTerms: acceptTerms, 
+                    co: co, 
+                    adress: adress, 
+                    ort: ort, 
+                    alttelnr: alttelnr, 
+                    kon: kon
+                }, function(data){
                     popup.html(data);
                     
                     $('#lnkpopup').click();
