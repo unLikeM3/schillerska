@@ -1,8 +1,8 @@
 <?php
-	$host	= 'wp-182898.mysql.binero.se';
-	$user	= '182898_pu91310';
-	$pass	= 'Sch1llNad';
-	$db		= '182898-wp';
+	$host	= '';
+	$user	= '';
+	$pass	= '';
+	$db		= '';
 
 	$con = mysql_connect($host, $user, $pass);
 	mysql_set_charset("UTF8", $con);
